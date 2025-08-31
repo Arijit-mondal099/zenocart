@@ -44,7 +44,6 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // Routes
-app.get("/", (req, res) => res.send("Wellcome to the ZenoCart!"));
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRouter);
