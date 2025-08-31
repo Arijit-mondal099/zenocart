@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
+import path from "path";
 
 import dbConnection from "./db/dbConnection.js";
 import userRouter from "./routes/user.routes.js";
@@ -17,6 +18,7 @@ import adminRouter from "./routes/admin.routes.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4001;
+const __dirname = path.resolve();
 await dbConnection();
 
 // Middlewares
@@ -53,12 +55,9 @@ app.use("/api/subscribers", subscriberRouter);
 app.use("/api/admin", adminRouter);
 
 // Serving frontend
-import path from "path";
-const __dirname = path.resolve();
-
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend", "dist")));
-  app.get("*", (req, res) => {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+  app.get("/*path", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
