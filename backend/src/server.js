@@ -22,7 +22,11 @@ await dbConnection();
 // Middlewares
 app.use(
   cors({
-    origin: ["http://locakhost:5173", process.env.CLIENT_URL],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      process.env.CLIENT_URL,
+    ].filter(Boolean),
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
