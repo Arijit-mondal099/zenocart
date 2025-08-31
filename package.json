@@ -1,13 +1,13 @@
 {
   "name": "zenocart",
   "version": "1.0.0",
+  "description": "e-commerce application",
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
   },
-  "keywords": ["shopping", "ecommerce", "zenocart", "online store"],
+  "keywords": [],
   "author": "arijit mondal",
-  "license": "ISC",
-  "description": "A shopping cart application."
+  "license": "ISC"
 }
