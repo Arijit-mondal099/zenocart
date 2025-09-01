@@ -202,6 +202,8 @@ export const getProducts = async (req, res) => {
       limit,
     } = req.query;
 
+    console.log(brand)
+
     let querys = {};
     let sort;
 
@@ -216,10 +218,12 @@ export const getProducts = async (req, res) => {
     if (color) querys.colors = { $in: [color] };
     if (gender) querys.gender = gender;
 
+    console.log(querys)
+
     if (minPrice || maxPrice) {
-      querys.price = {};
-      if (minPrice) querys.price.$gte = Number(minPrice);
-      if (maxPrice) querys.price.$lte = Number(maxPrice);
+      querys.discountPrice = {};
+      if (minPrice) querys.discountPrice.$gte = Number(minPrice);
+      if (maxPrice) querys.discountPrice.$lte = Number(maxPrice);
     }
 
     if (search) {

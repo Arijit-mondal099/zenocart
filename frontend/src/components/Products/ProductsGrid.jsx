@@ -18,7 +18,7 @@ const ProductsGrid = ({ products, loading }) => {
         products.map((product) => (
           <div
             key={product._id}
-            className="group border border-gray-800 w-full h-full rounded-lg overflow-hidden cursor-pointer"
+            className="group bg-gray-800 border border-gray-800 w-full h-full rounded-lg overflow-hidden cursor-pointer"
             onClick={() => handleProductClick(product._id)}
           >
             <div className="w-full overflow-hidden">
@@ -29,7 +29,7 @@ const ProductsGrid = ({ products, loading }) => {
               />
             </div>
 
-            <div className="flex flex-col gap-1 items-start justify-center px-4 py-2 bg-gray-800 h-full">
+            <div className="flex flex-col gap-1 items-start justify-center px-4 py-2">
               <p className="text-sm text-white font-semibold capitalize">{product.name}</p>
               <p className="flex items-center gap-2">
                 <span className="text-sm text-white font-semibold">

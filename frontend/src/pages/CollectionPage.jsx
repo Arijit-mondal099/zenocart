@@ -17,11 +17,11 @@ const CollectionPage = () => {
     color: "", 
     size: [], 
     material: [], 
-    brand: [], 
-    minPrice: 10, 
-    maxPrice: 1000,
+    brand: [],
+    minPrice: 150, 
+    maxPrice: 10000,
   });
-  const [priceRange, setPriceRange] = useState([10, 1000]);
+  const [priceRange, setPriceRange] = useState([150, 10000]);
 
   const { products, loading } = useSelector((state) => state.product);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -53,9 +53,9 @@ const CollectionPage = () => {
 
   const handlePriceChange = (e) => {
     const newPrice = e.target.value;
-    const newFilters = { ...filters, minPrice: 10, maxPrice: newPrice };
+    const newFilters = { ...filters, minPrice: 150, maxPrice: newPrice };
 
-    setPriceRange([10, newPrice]);
+    setPriceRange([150, newPrice]);
     setFilters(newFilters);
     updateURLParams(newFilters);
   };
@@ -113,7 +113,7 @@ const CollectionPage = () => {
       </button>
 
       {/* filter sidebar (large only) */}
-      <div className="hidden bg-gray-900 p-4 rounded-lg lg:flex w-64 h-full min-h-screen overflow-y-auto border-r border-gray-800 flex-col space-y-4">
+      <div className="hidden bg-gray-900 p-4 rounded-lg lg:flex w-full max-w-64 h-full min-h-screen overflow-y-auto border-r border-gray-800 flex-col space-y-4">
         <div className="flex items-center gap-1 font-bold text-white">
           <Funnel className="w-4 h-4" />
           Filter
@@ -248,22 +248,22 @@ const CollectionPage = () => {
         </div>
 
         {/* price range filter */}
-        <div className="flex flex-col items-start gap-1 pr-2 text-white">
+        <div className="flex flex-col items-start gap-1 text-white">
           <p className="text-sm font-medium">Price Range</p>
 
           <input
             type="range"
             name="priceRange"
-            min={10}
-            max={1000}
+            min={150}
+            max={10000}
             className="w-full h-1.5 bg-gray-300 rounded-lg appearance-none cursor-pointer"
             value={priceRange[1]}
             onChange={handlePriceChange}
           />
 
           <div className="flex text-xs font-medium justify-between items-center w-full mt-1">
-            <span>${priceRange[0]}</span>
-            <span>${priceRange[1]}</span>
+            <span>₹{priceRange[0]}</span>
+            <span>₹{priceRange[1]}</span>
           </div>
         </div>
       </div>
