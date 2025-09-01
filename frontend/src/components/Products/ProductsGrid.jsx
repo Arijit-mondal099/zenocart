@@ -29,7 +29,7 @@ const ProductsGrid = ({ products, loading }) => {
               />
             </div>
 
-            <div className="flex flex-col gap-1 items-start justify-center px-4 py-2 bg-gray-800">
+            <div className="flex flex-col gap-1 items-start justify-center px-4 py-2 bg-gray-800 h-full">
               <p className="text-sm text-white font-semibold capitalize">{product.name}</p>
               <p className="flex items-center gap-2">
                 <span className="text-sm text-white font-semibold">
