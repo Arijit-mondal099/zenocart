@@ -18,7 +18,7 @@ const ProductsGrid = ({ products, loading }) => {
         products.map((product) => (
           <div
             key={product._id}
-            className="group border border-gray-800 w-full h-95 rounded-lg overflow-hidden cursor-pointer"
+            className="group border border-gray-800 w-full rounded-lg overflow-hidden cursor-pointer"
             onClick={() => handleProductClick(product._id)}
           >
             <div className="w-full overflow-hidden">
