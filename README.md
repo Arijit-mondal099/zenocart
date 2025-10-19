@@ -4,7 +4,7 @@ A modern, full-stack e-commerce platform built with React and Node.js, featuring
 
 ## 🌐 Live Demo
 
-🔗 **Live URL**: [https://zenocart.vercel.app](https://your-live-url-here.com)
+🔗 **Live URL**: [Watch now](https://zenocart.onrender.com)
 
 ## 📸 Screenshots
 
@@ -16,6 +16,7 @@ A modern, full-stack e-commerce platform built with React and Node.js, featuring
 | **Shopping Cart**    | ![Shopping Cart](./screenshots/cart.png)              | Seamless cart experience with real-time updates                   |
 | **Checkout Process** | ![Checkout](./screenshots/checkout.png)               | Secure checkout with Razorpay integration                         |
 | **User Profile**     | ![User Profile](./screenshots/profile.png)            | User dashboard with order history and profile settings            |
+| **Oeder Details**     | ![User Profile](./screenshots/order-details.png)     | User order details                                                |
 | **Admin Dashboard**  | ![Admin Dashboard](./screenshots/admin-dashboard.png) | Comprehensive admin panel for managing products and orders        |
 | **Order Management** | ![Order Management](./screenshots/admin-orders.png)   | Admin interface for tracking and managing customer orders         |
 
