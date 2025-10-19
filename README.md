@@ -10,7 +10,7 @@ A modern, full-stack e-commerce platform built with React and Node.js, featuring
 
 | Page                 | Screenshot                                            | Description                                                       |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
-| **Homepage**         | ![Homepage](./screenshots/homepage.png)               | Clean and modern homepage with featured products and hero section |
+| **Homepage**         | ![Homepage](./screenshots/home.png)               | Clean and modern homepage with featured products and hero section |
 | **Product Catalog**  | ![Product Catalog](./screenshots/catalog.png)         | Browse through our extensive product collection with filters      |
 | **Product Details**  | ![Product Details](./screenshots/product-details.png) | Detailed product view with images and specifications              |
 | **Shopping Cart**    | ![Shopping Cart](./screenshots/cart.png)              | Seamless cart experience with real-time updates                   |
